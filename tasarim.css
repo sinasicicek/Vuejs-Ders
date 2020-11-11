@@ -1,0 +1,98 @@
+xmp {
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 500px;
+  text-align: left;
+  position: relative;
+  left: 20px;
+}
+.sayfa {
+  position: relative;
+  padding: 150px;
+  border-radius: 10px;
+  top: 50px;
+  left: 15%;
+  width: 60%;
+  display: block;
+
+  background-color: #006270;
+}
+h1 {
+  text-align: center;
+}
+p {
+  color: black;
+  position: relative;
+  font-size: 24px;
+}
+xmp:hover {
+  background-color: #006270;
+  overflow: auto;
+}
+.sinasi {
+  position: relative;
+  left: 100px;
+  top: 50px;
+  width: 80%;
+}
+ul {
+  list-style-type: none;
+}
+li a {
+  color: white;
+
+  font-size: 40px;
+}
+li a:hover {
+  opacity: 1;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+li {
+  overflow: auto;
+  position: relative;
+  margin: 10px;
+  left: 100px;
+}
+
+.kutu {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+.text li {
+  overflow: auto;
+  position: relative;
+  margin: 0px;
+  left: 0px;
+}
+
+.indexİmg {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 3px;
+  background-color: blue;
+}
+.imgDiv {
+  position: relative;
+  left: 0px;
+}
+.kapsayici {
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  margin: 20px;
+  padding: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  justify-content: left;
+}

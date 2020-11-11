@@ -1,0 +1,47 @@
+.kapsayici {
+  display: flex;
+}
+ul {
+  list-style-type: none;
+  padding: 80px;
+}
+.ifre {
+  width: 1200px;
+  padding: 80px;
+}
+li {
+  margin: 10px;
+  padding: 10px;
+}
+li > a {
+  color: black;
+  font-size: 18px;
+  font-family: monospace;
+}
+iframe {
+  width: 1200px;
+  height: 900px;
+}
+li:hover {
+  background-color: white;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+li > a:hover {
+  background-color: white;
+}
+
+/*syntax bölümü*/
+.contain {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(#f3e9e8, #96b9d9);
+}
+.item {
+  padding: 10px;
+  margin: 10px;
+  font-family: monospace;
+  font-size: 20px;
+}
+/*syntax*/

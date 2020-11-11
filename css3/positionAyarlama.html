@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    .relative 
+                  {
+                    position: relative;
+                    left: 30px;
+                    top: 30px;
+                    background-color: cornflowerblue;
+                   }
+                   .fixd
+              {
+                position:fixed ;
+                bottom : 0 ;
+                right : 0 ;
+                width : 300px;
+                color: black;
+                border : 3px solid red; 
+              }
+              .sticky {
+              position: -webkit-sticky;
+              position: sticky;
+              top: 0;
+              padding: 5px;
+              border-style: solid;
+              background-color: #cae8ca;
+              border: 2px solid #4CAF50;
+            }
+            img {
+              position: relative;
+              left: 0px;
+              top: 10px;
+              z-index: -1;
+            }
+            li {
+              list-style-type: none;
+            }
+</style>
+    <title></title>
+  </head>
+  <body>
+
+      <div class="container">
+          <!--Static-->
+          <div class="row jumbotron">
+            <h1 class="btn-primary" style="color:black;">
+              <strong>Static :</strong>Default olarak tüm elementler Static olarak
+              tanımlandılar.Genişlik(width) ve yükseklik(height) verilemez
+            </h1>
+          </div>
+      <!--Absolute-->
+      <div class="row jumbotron" >
+        <h1 class="btn-primary" style="color:black;">
+          <strong>Absolute :</strong>Serbset olarak konumlandırmamzı saglar.
+          İçinde bulundugu
+          kapsayıcı(div,p,..) position özelliigi varsa ona göre konumlanır yoksa bir 
+          üste cıkar bakar ona göre konumlanır yine yoksa en son body kadar gider ve body
+          göre konum alır.
+          <xmp>
+            .kutu2 { position:realtive;}
+            .kutu3{ position:absolute ; left :10px; }
+            <body>
+              <div class="kutu btn-warning" >
+                <div class="kutu2 btn-primary">
+                  <div class="kutu3">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Necessitatibus sunt odit et provident iusto unde
+                     quibusdam autem.
+                  </div>
+                </div>
+              </div>
+            
+          </xmp> 
+        </h1>
+
+        <h2>
+            <div class="kutu "  >Kutu
+                <div class="kutu2  btn-primary" style="background-color:springgreen;">Kutu2
+                  <div class="kutu3 btn-alert" style="position:relative; background-color:black" >kutu3
+                      <div id="absolute-orn" style="background-color:red;">Örnek Nesne</div>  
+                      <p>
+                          Yukarıdaki örnegi burada uygulayalım. 
+                          Yukarıdaki örnekte kutu3 position özelligi absolute ve uygulanırken bir üst kapsayıcısı olan
+                          div position özlliig relative diye bakar eger öyleyse ki öyle kutu2 göre konumlanır
+                      </p>
+                      <button id="absolute-btn" >Uygula</button>
+                  </div>
+                </div>
+              </div>
+
+        </h2>
+      </div>
+          <!--Relative-->
+          <div class="row jumbotron">
+            <h1 class="btn-success">
+              <strong>Relative : </strong>Sayfa akışına uymadan istenilen yönden
+              uzaklık verebiliriz ve diger elementlerin önünde yer alır
+            </h1>
+            <div>
+              <label id="relative" class="btn-success disable">
+                Relative Uygulanacak Nesne
+              </label>
+              <label id="sonucRelative" style="display:none;"
+                >Yukarıdaki nesne Static konumda</label
+              >
+            </div>
+          </div>
+          <div style="display:block;">
+            <button id="relativeBtn" class="btn-success">Relative Uygula</button>
+          </div>
+          <br />
+    
+          <!--Fixed-->
+          <div class="row">
+            <div class="row jumbotron">
+              <h1 class="btn-danger">
+                <strong>Fixed : </strong>Belirlenen konum neresi ise oraya
+                sabitlenir sayfanın durumu ne olursa olsun yeri bozulmaz
+                <strong>Dİkkat egerki yükseklik ve Genişlik verilmezse sayfada 
+                  görünmez.Bu degerle verilmek zorundadır
+                </strong>
+                <h2>kapsayıcı ne olursa olsun body tagıan göre konum alır ve sayfanın görünen alanında bulunur</h2>
+              </h1>
+              <svg
+                id="fixed"
+                class="bi bi-battery-charging"
+                width="10em"
+                height="10em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14.5 9.5a1.5 1.5 0 000-3v3z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M9.585 2.568a.5.5 0 01.226.58L8.677 6.832h1.99a.5.5 0 01.364.843l-5.334 5.667a.5.5 0 01-.842-.49L5.99 9.167H4a.5.5 0 01-.364-.843l5.333-5.667a.5.5 0 01.616-.09z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M6.332 4H2a2 2 0 00-2 2v4a2 2 0 002 2h2.072l.307-1H2a1 1 0 01-1-1V6a1 1 0 011-1h3.391l.941-1zM4.45 6H2v4h1.313a1.5 1.5 0 01-.405-2.361L4.45 6zm.976 5l-.308 1H6.96l.21-.224h.001l.73-.776H6.53l-.085.09.028-.09H5.426zm1.354-1H5.733l.257-.833H4a.5.5 0 01-.364-.843l.793-.843L5.823 6h1.373L5.157 8.167h1.51a.5.5 0 01.478.647L6.78 10zm.69 0h1.374l1.394-1.482.793-.842a.5.5 0 00-.364-.843h-1.99L8.933 6H7.887l-.166.54-.199.646A.5.5 0 008 7.833h1.51L7.47 10zm.725-5H9.24l.308-1H7.706l-.942 1h1.374l.085-.09-.028.09zm2.4-1l-.308 1H12a1 1 0 011 1v4a1 1 0 01-1 1H9.276l-.942 1H12a2 2 0 002-2V6a2 2 0 00-2-2h-1.405zm-.378 6H12V8.02a1.499 1.499 0 01-.241.341L10.217 10zM12 6.646V6h-.646a1.5 1.5 0 01.646.646z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+    
+              <label id="fixedSonuc" style="display:none;"></label>
+            </div>
+          </div>
+          <div>
+            <button id="fixedBtn" class="btn-danger">fixed Uygula</button>
+          </div>
+          
+
+  
+    </div>
+
+    <script>
+
+/*********** absolute***********************/
+      document.getElementById("absolute-btn").addEventListener('click',()=>{
+       let nesen= document.getElementById("absolute-orn").style;
+       nesen.position="absolute";
+       nesen.left="50px";
+       nesen.top="-20px";
+      });
+        /*********** realtive***********************/
+        document.getElementById("relativeBtn").addEventListener("click", () => {
+          let nesne = document.getElementById("relative").style;
+          nesne.position = "Relative";
+          nesne.left = "30px";
+          nesne.bottom = "150px";
+  
+          let sonuc = document.getElementById("sonucRelative");
+          sonuc.style.display = "inline";
+          sonuc.innerHTML =
+            "Relative ayarlandÄ± soldan 30px alttan 150px olarak ayarlandÄ± gÃ¶rÃ¼ldÃ¼gÃ¼ gibi akÄ±ÅÄ± bozarak Ã¶nplana cÄ±ktÄ± ";
+          setTimeout(() => {
+            nesne.position = "static";
+            sonuc.innerHTML +=
+              "TanÄ±mlÄ± oldugu static haline geri dÃ¶ndÃ¼ AyrÄ±ca Gittigi noktadaki yeri boÅ kalÄ±r";
+          }, 4000);
+        });
+  
+        /*********** fixed ***********************/
+  
+        document.getElementById("fixedBtn").addEventListener("click", () => {
+          let pil = document.getElementById("fixed");
+          pil.style.position = "fixed";
+          pil.style.right = "5px";
+          pil.style.top = "10px";
+  
+          document.getElementById("fixedSonuc").style.display = "inline";
+          document.getElementById("fixedSonuc").innerHTML =
+            "pil işareti sag üst köşeye sabitlendi";
+        });
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

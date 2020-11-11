@@ -1,0 +1,10 @@
+a { 
+    width: 50px;
+    color: white;
+   }
+   a:hover{
+     background-color: #38a1d5;
+   }
+   nav {
+       background-color: black;
+   }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title></title>
+  </head>
+  <body>
+    <!--Container -->
+    <div class="jumbotron">
+      <h1>Container Sistemi</h1>
+      <div>
+        <div id="sonuc" class="container" style="background-color: blue;">
+          <h1 id="sonucH1" style="color: white;">
+            Buradaki Alana Container Özelligi uygulandı
+          </h1>
+        </div>
+      </div>
+      <div class="container">
+        <button id="contain" class="btn btn-primary">Container</button>
+        <button id="contain-sm" class="btn btn-danger">Container sm</button>
+        <button id="contain-md" class="btn btn-warning">Container md</button>
+        <button id="contain-xl" class="btn btn-info">Container xl</button>
+        <button id="contain-lg" class="btn btn-dark">Container lg</button>
+        <button id="contain-fluid" class="btn btn-light">
+          Container fluid
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="jumbotron">
+      <h1>Grid Sistemi</h1>
+      <h3>
+        Grid sisteminde sayfa 12 bölüme ayrılır ve istedigimiz gibi
+        parçalayabilirz
+      </h3>
+
+      <div class="container">
+        <div class="row btn-warning">
+          <div class="col-4 btn-danger">
+            Bu Alan 4 Bölüme Ayrıldı
+          </div>
+          <div class="col-6 btn-primary">
+            Bu Alan 6 Bölüme Ayrıldı
+          </div>
+          <div class="col-2 btn-info">Bu Alan 2 Bölüme Ayrıldı</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid col -->
+    <div class="jumbotron">
+      <h1>Grid Sistemi</h1>
+      <h3>col-sm/col-md</h3>
+      <div class="container">
+        <div class="row btn-warning">
+          <div class="col-md btn-danger">
+            Bu Alanda class adı olarak <strong>col-sm</strong> değeri verildi
+          </div>
+          <div class="col-xl btn-primary">
+            Bu Alanda class adı olarak <strong>col-sm</strong> değeri verildi
+          </div>
+
+          <div class="col-sm btn-alert">
+            Bu Alanda class adı olarak <strong>col-sm</strong> değeri verildi
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid row -->
+    <div class="jumbotron">
+      <h1>Grid row</h1>
+      <h3>row-cols-2 ile 2 satırlı 2 sütunlu alan oluşturuldu</h3>
+      <div class="container">
+        <div class="row row-cols-2 btn-warning">
+          <div class="col btn-danger">
+            Column
+          </div>
+          <div class="col btn-primary">
+            Column
+          </div>
+
+          <div class="col btn-alert">
+            Column
+          </div>
+          <div class="col btn-info">
+            Column
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <xmp>
+          <div class="container">
+            <div class="row row-cols-2">
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+            </div>
+          </div>
+        </xmp>
+      </div>
+    </div>
+
+    <!-- İmage  -->
+    <div class="jumbotron">
+      <h1>İmg konumlandırma</h1>
+      <ul>
+        <ol class="btn-warning">
+          <strong>img-thumbnail</strong>
+          <br />
+          <img
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+            class="img-thumbnail"
+          />
+        </ol>
+        <ol class="btn-primary">
+          <strong> img fluid</strong>
+          <br />
+          <img
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+            class="img-fluid"
+          />
+        </ol>
+        <ol class="btn-info">
+          <strong>rounded float-left</strong>
+          <br />
+          <img
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+            class="rounded float-left "
+          />
+        </ol>
+        <ol style="background-color:blueviolet;">
+          <strong> rounded float-right</strong>
+          <br />
+          <img
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+            class="rounded float-right"
+          />
+        </ol>
+        <br />
+        <ol class="btn-primary">
+          <strong> rounded</strong>
+          <br />
+          <img
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+            class="rounded"
+          />
+        </ol>
+        <ol></ol>
+      </ul>
+    </div>
+
+    <!-- İmage -border -->
+    <div class="jumbotron">
+      <div class="container">
+        <div>
+          <h3>
+            Border border-primary Özelligi ile çerçeve rengi verebiliyoruz
+            <ul>
+              <li>primary</li>
+              <li>Secondary</li>
+              <li>Success</li>
+              <li>danger</li>
+              <li>warning</li>
+              <li>dark</li>
+              <li>light</li>
+            </ul>
+          </h3>
+          border-primary özelligi ile çerçeve rengi değiştirildi<br />
+          <img
+            class="border border-primary"
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+          />
+        </div>
+        <div>
+          <h3>rounded-circle ile dairesel çerçeve oluşturuldu</h3>
+          <img
+            class="border border-primary rounded-circle"
+            src="https://img.icons8.com/bubbles/50/000000/react.png"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="contain.js"></script>
+    <script src="grid.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style>
+      .flex-direct {
+        background-color: grey;
+        display: flex;
+      }
+      .item {
+        margin: 20px;
+        padding: 20px;
+      }
+      .buton {
+        margin: 10px;
+        padding: 10px;
+      }
+      #kod,
+      #kod2,
+      #kod3 {
+        font-family: monospace;
+        font-size: 20px;
+        display: inline;
+        color: black;
+      }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div id="sonuc" class="flex-direct">
+      <div class="jumbotron item">item 1</div>
+      <div class="jumbotron item">item 2</div>
+      <div class="jumbotron item">item 3</div>
+      <div class="jumbotron item">item 4</div>
+    </div>
+    <h1>Flex-Direction</h1>
+    <div style="display:flex;">
+      <button id="colum" class="btn btn-primary buton">
+        flex-direction:Column
+      </button>
+      <button id="rw" class="btn btn-primary buton">flex-direction:row</button>
+      <button id="col-reverse" class="btn btn-primary buton">
+        flex-direction:Column-reverse
+      </button>
+    </div>
+    <br />
+    <div class="jumbotron btn-primary">
+      <h3>Html</h3>
+      <xmp id="kod">
+          <div id="sonuc" class="flex-direct">
+              <div class="jumbotron item">item 1</div>
+              <div class="jumbotron item">item 2</div>
+              <div class="jumbotron item">item 3</div>
+              <div class="jumbotron item">item 4</div>
+            </div>
+      </xmp>
+
+      <h3>Css</h3>
+      <xmp id="kod3"
+>
+          .item {  
+            margin: 20px; 
+            padding: 20px; }
+
+
+      </xmp>
+      <xmp id="kod2"></xmp>
+    </div>
+    <script src="./flexBox.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+.rowT {
+  opacity: 0.4;
+}
+
+.rowT:hover {
+  opacity: 1;
+  border-top-style: solid;
+  border-top-color: linear-gradient(#38a1d5, #531238);
+  color: #551138;
+}
+
+.aT {
+  border-top-style: solid;
+  border-top-width: 3px;
+}
+
+.jumboT {
+  background-color: #2e4583;
+  color: white;
+  display: block;
+  font-size: 30px;
+}
+.back {
+  background-image: url("./img/bakcBody.jpg");
+  background-repeat: no-repeat;
+}
+
+#anaPlan {
+  background-color: #cad8e2;
+}
+.hucre {
+  background-image: linear-gradient(#38a1d5, #531238);
+}
+.jumboColor {
+  background-color: #2e4583;
+  border-radius: 0px;
+}

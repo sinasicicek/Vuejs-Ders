@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .cerceve {
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 3px;
+        border-color: red;
+      }
+      p:hover {
+        color: hotpink;
+      }
+      a.sinasi:hover {
+        color: hotpink;
+      }
+
+      ul li {
+        background-color: blue;
+      }
+      p.hilal::first-line {
+        color: lightseagreen;
+      }
+      ul li:first-child {
+        background-color: green;
+      }
+      span {
+        display: none;
+        background-color: yellow;
+      }
+      div:hover span {
+        display: block;
+      }
+    </style>
+
+    <title></title>
+  </head>
+  <body>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="container">
+        <div class="row">
+          <div class="jumbotron">
+            <h1>Pseudo class</h1>
+            <p>
+              Secilen element içindeki tag olacakları belirleyebiliriz.Örnegin
+              div etiketinin üstüne geldigmizde p taglarına olacakları
+              belirlemek için :
+            </p>
+            <xmp
+              style="font-size:20px;font-family:monospace; border-style:solid;border-radius:5px;"
+>
+               p {
+                   display: none;
+                  background-color: yellow;
+                   padding: 20px;
+                  }
+                  
+                  div:hover p{
+                    div üzerine geliindiginde p tag için olacaklar
+                  }            
+          </xmp
+            >
+            <span>İslem gerçekleşti</span>
+          </div>
+          <div class="jumbotron">
+            <xmp
+              style="font-size:20px;font-family:monospace; border-style:solid;border-radius:5px;"
+> p::after { content: " - yeni içerik eklendi"; } </xmp
+            >
+            <p id="metin">
+              Buradaki alana daaha sonradan eklenecek metin yukarıdaki
+            </p>
+            <ul>
+              <li><strong>p::after :</strong> p etiketinden sonra eklenicek</li>
+              <li><strong>p::before :</strong> p etiketinden önce eklenicek</li>
+              <li>
+                <strong>p::first-letter:</strong> p etiketinin degerinin ilk
+                harfine olacaklar
+              </li>
+            </ul>
+            <br />
+            <button id="ekle" class="btn-primary">EKle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("ekle").addEventListener("click", () => {
+        document.getElementById("metin").innerHTML += "yeni içerik eklendi";
+      });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

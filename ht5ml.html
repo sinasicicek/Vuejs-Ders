@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./navbarTsarim.css" />
+
+    <title></title>
+  </head>
+
+  <body>
+    <nav class="nav nav-pills flex-column flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link " href="index.html"
+        >Ana Sayfa</a
+      >
+      <a class="flex-sm-fill text-sm-center nav-link " href="ht5ml.html"
+        >Html5</a
+      >
+      <a class="flex-sm-fill text-sm-center nav-link" href="css3.html">Css3</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="javascript.html"
+        >JavaScript</a
+      >
+    </nav>
+    <br />
+    <div class="accordion container" id="accordionExample">
+      <!--Html taglarına Ulaşmak-->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Html taglarına Ulaşmak
+            </button>
+          </h2>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse show"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <!--ById-->
+            <div class="row">
+              <div class="jumbotron">
+                <h1>getElementById</h1>
+                <p>
+                  Html taglarına verilen ıd degerin ulaşır. Her ıd özgündür yani
+                  tek olmalıdır
+                </p>
+                <xmp>document.getElementById('ad')</xmp>
+              </div>
+            </div>
+
+            <!--TagName-->
+            <div class="row">
+              <div class="jumbotron">
+                <h1>getElementsByTagName</h1>
+                <div>
+                  <p>
+                    Html taglarına içinde bulunmasını istedigi tagları bulur ve
+                    dizi gibi tutar.
+                  </p>
+                  <p>Örnek olarak bu ve üsteki metin kulllanalım</p>
+                </div>
+                <div>
+                  <button id="tagName" class="btn-primary">Göster</button>
+                </div>
+                <div class="row">
+                  <p id="sonucTagName"></p>
+                  <xmp
+                    id="xmpTagName"
+                    class="alert alert-success"
+                    style="font-size:15px; font-family:monospace; overflow: auto;"
+>
+                  let diziP = document.getElementsByTagName("p");
+                  diziP[0].innerHtml bize sıfırıncı p etiketini vericektir
+                </xmp
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!--ClassName-->
+            <div class="row">
+              <div class="jumbotron">
+                <h1 class="sinasi">getElementsClassName</h1>
+                <p class="sinasi">
+                  Html taglarına verilen classlara ulaşır birden fazla html
+                  tagına aynı Class adı verilebilir.TagName oldugu gibi dizi
+                  olarak tutar kullanımı aynıdır
+                  <strong
+                    >istenirse classlar içinde seçme yapılabilir örnegin p
+                    taglarından class adı sinasi olanları seçmek gibi</strong
+                  >
+                </p>
+                <button id="classNam" class="btn-danger">Göster</button>
+                <xmp
+                  id="sonucClass"
+                  class="btn-danger"
+                  style="font-size: 20px; "
+>
+                let yaz=document.querySelectorAll("p.sinasi");
+                yaz[0].innerHTML; // yaz[0] içindeki deger ;
+              </xmp
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--HTML TAG ATTİRİBUTE DEGİŞTİRME-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              HTML TAG ATTİRİBUTE DEGİŞTİRME
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionExample"
+        >
+          <class class="card-body">
+            <div class="container" style="font-size: 24px;">
+              <div class="jumbotron">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    ıd adı etiket olan img tag src attribute degerini
+                    degiştirdik
+                    <br />
+                    <strong style="color: red;">
+                      document.getElementsById('etiket').src="resim.jpg";</strong
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    Aynı işlemi Css özelliklerini degiştirmek içinde
+                    kullanabiliriz
+                    <strong style="color: red;"
+                      >document.getElementById("p2").style.color =
+                      "blue";</strong
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="container">
+              <div class="jumbotron">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    html tagı içinde event de tanımlabilir <br />
+                    <strong style="color: red;"
+                      >button
+                      onclick="document.getElementById('p').style.color=red"</strong
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </class>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Html Taglerine attribute Olarak Event Ekleme
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <div class="container" style="font-size: 24px;">
+              <div class="jumbotron">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    İstenirse direk html taglarına attribute olarak even
+                    verebiliriz
+                    <strong>p onclick="this.innerHtml='click' "</strong>
+                    <p
+                      onclick="this.innerHTML='Şimdi Tıklandı'; document.getElementById('xm').style.display='inline' "
+                    >
+                      Buraya Tıkla ve Sonucu gör
+                    </p>
+                    <xmp
+                      id="xm"
+                      style="display: none;"> <p onclick="this.innerHTML='Şimdi Tıklandı' ">Buraya Tıkla ve Sonucu gör</p> </xmp>
+                  </li>
+                  <li class="list-group-item">
+                    Bu İşlem daha farklı bir yontemle tag bilgileri JavaScript
+                    tarafına yollanabilir
+                    <p onclick="tikla(this);">Buraya Tıkla Sonucu gör</p>
+                    <xmp id="olay" style="display: none;">
+                  <p onclick="tikla(this);">Buraya Tıkla Sonucu gör</p>
+                  <script>   function tikla(nesne)  { nesne.innerHTML="Tiklandi"; }; </script>
+                </xmp>
+                    <script>
+                      function tikla(nesne) {
+                        nesne.innerHTML = "Tiklandi";
+                        document.getElementById("olay").style.display =
+                          "inline";
+                      }
+                    </script>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapsefour"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Onload ve Unload Olayları
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapsefour"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <strong>
+              Sayfa yüklendiginde Onload sayfadan ayrıldıgında Unload olayları
+              gerçekleşir
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <!--Document Özellikleri-->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Document Özellikleri
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseFive"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <strong>document.body.innerHtml</strong> ile tüm sayfanın kodlarına
+            ulaşılır <br />
+            <strong>document.documentElement.innerHtml</strong> ile sayfadaki
+            elementlere ve içeriklere ulaşılır <br />
+            <strong>document.getElementsById('id01').nodeName</strong> id01
+            hangi tag oldugunu veriri( h1,p ...vb) <br />
+          </div>
+        </div>
+      </div>
+
+      <!--Element Olusturma-->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Element Olusturma
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseSix"
+          class="collapse container"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <textarea name="" id="IDE" cols="100" rows="10">
+        
+        <script>  
+          let nesne=document.createElement("p");
+          let icerik=document.createTextNode("Yeni nesne eklendi");
+          nesne.appendChild(içerik);
+
+          let eklenecekYer=document.getElementsById("div1");
+          eklenecekYer.appendChild(nesne);
+        </script>
+        </textarea
+            >
+            <p>
+              nesne isimli element div1 id tagın son elemanı oalrak
+              eklenir.İstenirse ilk sırayada eklenebilri bunu yapmak içinse ;
+              <br />
+              <textarea name="" id="IDE" cols="100" rows="10">
+  
+            let nesne=document.createElement("p");
+            let icerik=document.createTextNode("Yeni nesne eklendi");
+            nesne.appendChild(içerik);
+  
+            let eklenecekYer=document.getElementsById("div1");
+            var child = document.getElementById("p1");
+            element.insertBefore(para, child);
+          </textarea
+              >
+
+              p1 idli tagdan önce eklenecektir elementimiz <br />
+            </p>
+            <p>
+              <strong>Silme işlemini ise </strong> <br />
+              <textarea name="" id="" cols="80" rows="10">
+          var elmnt = document.getElementById("p1");
+        elmnt.remove();
+        </textarea
+              >
+              <textarea name="" id="" cols="80" rows="10">
+          <div id="div1">
+            <p id="p1">This is a paragraph.</p>
+            <p id="p2">This is another paragraph.</p>
+            </div>
+            
+            <script>
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p1");
+            parent.removeChild(child);
+            </script>
+        </textarea
+              >
+              Bu şekilde div içindeki p1 idsinden sonraki elementler silinir
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script>
+      document.getElementById("run").addEventListener("click", () => {});
+
+      document.getElementById("classNam").addEventListener("click", () => {
+        let yaz = document.querySelectorAll("p.sinasi");
+        document.getElementById("sonucClass").innerHTML += yaz[0].innerHTML;
+      });
+
+      document.getElementById("tagName").addEventListener("click", () => {
+        let diziP = document.getElementsByTagName("p");
+
+        document.getElementById("xmpTagName").innerHTML += diziP[0].innerHTML;
+      });
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
